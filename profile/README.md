@@ -96,7 +96,7 @@ python scripts/validate_reproducibility.py
 
 ## 📚 Documentation & Resources
 
-- **Papers**: Peer-reviewed manuscripts and preprints in `papers/` directories
+- **Papers**: Manuscripts and preprints in `papers/` directories
 - **Notebooks**: Interactive Jupyter notebooks with educational content
 - **Validation**: Comprehensive benchmark validation frameworks
 - **API Documentation**: Detailed technical documentation for all modules
