@@ -119,7 +119,7 @@ All software is released under the MIT License unless otherwise specified. Paper
 For research inquiries, collaborations, or technical questions:
 - **Issues**: Open an issue in the relevant repository
 - **Discussions**: Use GitHub Discussions for general questions
-- **Email**: Contact maintainers through repository author information
+- **Email**: Contact maintainers through our [website](https://dawsoninstitute.org/index.html#contact)
 
 ---
 
