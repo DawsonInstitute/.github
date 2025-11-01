@@ -33,20 +33,24 @@ The Dawson Institute develops open-source computational frameworks and experimen
 ## 📊 Key Projects
 
 ### 🔭 [coherence-gravity-coupling](https://github.com/DawsonInstitute/coherence-gravity-coupling)
-**Coherence-Modulated Gravity: Laboratory Experiment Design**
+**Coherence-Modulated Gravity: Laboratory Experiment Design & Null Results**
 
-Computational and experimental workflows exploring matter-geometry coupling through macroscopic quantum coherence. Proposes experimentally testable framework where coherence fields modulate effective gravitational coupling constant G_eff.
+Computational and experimental workflows exploring matter-geometry coupling through macroscopic quantum coherence and curvature–electromagnetism couplings. Includes systematic null-result studies and exclusion limits for beyond-GR physics.
 
-**Repository Highlights (v1.0.0):**
-- **Publication-ready manuscript** with 3 high-quality figures (LaTeX + PDF/PNG)
-- **Reproducible pipeline**: pinned environment (Python 3.11, numpy 1.26.4, scipy 1.14.1)
-- **Verification scripts**: 23 tests passing in 107s with release manifest generation
-- **Data integrity**: Complete SHA256 manifests for 3,940 result artifacts
+**Repository Highlights (v1.0.0+):**
+- **Two publication-ready manuscripts**: (i) coherence-gravity validation, (ii) null results & exclusion limits
+- **Enhanced analysis pipeline**: CLI sweeps for ξ, materials, curvature–EM limits (B, R, precision)
+- **Automated reporting**: CSV/Markdown/LaTeX table generation via `generate_report.py`
+- **Reproducible pipeline**: pinned environment (Python 3.13, numpy 1.26, scipy 1.11.3)
+- **Verification scripts**: 41 tests passing in ~94s with SHA256-keyed result caching
+- **Data integrity**: Complete SHA256 manifests for timestamped result artifacts
 - **Experimental feasibility**: Cryogenic torsion balance achieves SNR=5 in 0.7-24 hours
 
 **Key Scientific Results:**
-- **Validated signals**: τ_coh = 1.4 ± 0.2 × 10⁻¹² N·m (convergence at 81³-101³ resolution)
-- **Newtonian baseline**: τ_N ≈ 2×10⁻¹³ N·m (dimensional analysis validated)
+- **Coherence-gravity signals**: τ_coh = 1.4 ± 0.2 × 10⁻¹² N·m (convergence at 81³-101³ resolution)
+- **Null results**: Systematic sweeps over ξ ∈ {50,100}, materials, and geometries yield consistent nulls at numerical floor (|Δτ| ≈ 5×10⁻¹³ N·m)
+- **Curvature–EM exclusion limits**: κ_R < 5×10¹⁷ m² for B=10T, R=10⁻²⁶ m⁻², δ=10⁻⁶ (terrestrial lab constraints)
+- **CLI analysis tools**: Sweeps for coupling strengths, materials, magnetic fields, Ricci curvature, and experimental precision
 - **Energy reduction**: 10⁶-10¹⁰× gravitational coupling suppression with coherent systems
 - **Critical requirement**: Cryogenic operation (4K) + 10× seismic isolation essential
 
@@ -54,10 +58,11 @@ Computational and experimental workflows exploring matter-geometry coupling thro
 ```bash
 git clone https://github.com/DawsonInstitute/coherence-gravity-coupling.git
 cd coherence-gravity-coupling
-conda env create -f environment.yml && conda activate cohgrav
-pytest -q                          # 23 tests, ~107s
-python generate_figures.py         # Publication figures
-cd papers && pdflatex coherence_gravity_coupling.tex  # 5-page manuscript
+pip install -r requirements.txt   # Python 3.13 recommended
+pytest -q                          # 41 tests, ~94s
+python run_analysis.py sweep-curvature --B 0.5 1.0 3.0 10.0 --plot  # Exclusion limits
+python generate_report.py --all   # CSV/Markdown/LaTeX tables
+cd papers && pdflatex null_results.tex  # Null results manuscript
 ```
 
 ---
