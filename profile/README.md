@@ -123,6 +123,26 @@ pip install -r requirements.txt
 pytest  # Run test suite
 ```
 
+### 🪐 [cosmological-constant-workbench](https://github.com/DawsonInstitute/cosmological-constant-workbench)
+**Cosmological-constant-workbench (CCW): testing mechanisms for dark energy and novel observables**
+
+A reproducible framework to evaluate proposals for the cosmological constant and dark energy. CCW emphasizes transparency, constraints-first validation, and observational signatures that can *distinguish* modified-gravity or emergent scenarios from ΛCDM.
+
+**Highlights (Jan 2026):**
+- ✅ **Emergent gravity (H.18)** — Verlinde-inspired entropic/holographic implementation in `src/ccw/mechanisms/emergent_gravity.py`. The parameter-free case (α=1) reproduces an effective Λ-like ρ_DE with w≈−1; implemented, tested, and demo'ed.
+- ✅ **Gravitational wave standard sirens (I.21)** — `src/ccw/gw_observables.py` + `gw_likelihood` integrated into `joint_likelihood` to test d_L^GW ≠ d_L^EM via running G_eff(z) models (emergent gravity toy model, scalar-tensor adapters). Includes `generate_mock_gw_data` and `examples/demo_gw_sirens.py` showing current and ET-era constraints.
+- ✔️ **Testing & demos** — 25 GW-focused tests added (`tests/test_gw_observables.py`), full-demo script produces plots and χ² scans; core likelihood functions extended for GW terms.
+- ⚠️ **Work in progress / blockers** — Coupled ODE solver (J.22) is **BLOCKED** by dimensional scaling/unit normalization; next priorities are J.23 (radiative backreaction checks) and K.25 (LQG polymer corrections).
+
+**Getting started:**
+```bash
+git clone https://github.com/DawsonInstitute/cosmological-constant-workbench.git
+cd cosmological-constant-workbench
+pip install -r requirements.txt
+pytest -q  # Run test suite (GW tests pass; coupled ODE currently blocked)
+python examples/demo_gw_sirens.py  # Demonstration: GW-EM mismatch constraints
+```
+
 ---
 
 ## 🏆 Validated Performance Metrics
