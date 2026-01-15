@@ -15,6 +15,7 @@ The Dawson Institute develops open-source computational frameworks and experimen
 - Matter-geometry coupling via non-minimal scalar fields
 - Laboratory-scale precision gravimetry with cryogenic torsion balances
 - Reproducible computational workflows with pinned environments
+- Cosmological-constant-workbench: reproducible framework to evaluate dark energy mechanisms, emergent gravity models, and gravitational-wave standard-siren observables
 
 ### High-Temperature Superconducting (HTS) Systems
 - REBCO coil optimization for fusion and antimatter confinement
@@ -239,22 +240,22 @@ All software is released under the MIT License unless otherwise specified. Paper
 For research inquiries, collaborations, or technical questions:
 - **Issues**: Open an issue in the relevant repository
 - **Discussions**: Use GitHub Discussions for general questions
-- **Email**: Contact maintainers through repository README files
+- **Email**: info@dawsoninstitute.org
 
 ---
 
 ## 🌟 Recent Highlights
+
+**January 2026:**
+- ✅ Implemented emergent gravity mechanism and tests in `cosmological-constant-workbench` (parameter-free α=1 reproduces Λ-like ρ_DE).
+- ✅ Added gravitational wave standard siren observables and likelihoods (`src/ccw/gw_observables.py`), integrated into `joint_likelihood`; 25 GW-focused tests passing and demo script `examples/demo_gw_sirens.py` added.
+- ⚠️ Coupled ODE solver (J.22) remains BLOCKED due to unit normalization/scaling issues; next priorities: J.23 backreaction and K.25 LQG polymer.
 
 **October 2025:**
 - ✅ Released coherence-gravity-coupling v1.0.0 with validated experimental design
 - ✅ Validated 7.07T HTS coil designs with comprehensive FEA analysis
 - ✅ Achieved 40% energy optimization in warp field calculations
 - ✅ Published convergence-validated gravitational coupling framework
-
-**September 2025:**
-- ✅ Cross-platform FEA validation showing <1% solver variance (hts-coils)
-- ✅ MyBinder deployment with interactive educational notebooks
-- ✅ Integrated plasma-HTS coupling for high-beta confinement (β = 0.48)
 
 ---
 
