@@ -146,6 +146,36 @@ python examples/demo_gw_sirens.py  # Demonstration: GW-EM mismatch constraints
 
 ---
 
+### 🚀 [irrotational-warp-lab](https://github.com/DawsonInstitute/irrotational-warp-lab)
+**Irrotational Shift-Vector Warp Metrics: Validation & Optimization**
+
+Computational framework for exploring irrotational (curl-free) shift-vector warp metrics with Rodal-style potentials. Provides 3D volume integration, GPU acceleration, and Bayesian optimization for minimal negative-energy configurations.
+
+**Features:**
+- **Full 3D energy integration** with tail corrections (convergence to Rodal 2025 results)
+- **GPU acceleration** via CuPy backend (5-10× speedup for high-resolution grids)
+- **Bayesian optimization** achieving 5× efficiency vs grid+Nelder-Mead
+- **Validated against literature**: Rodal (2025), Celmaster & Rubin (2024)
+- **Paper-ready pipeline**: LaTeX manuscript + figure generation via Makefile
+- **39 passing tests** with CI/CD and comprehensive coverage tooling
+
+**Key Results:**
+- Tail imbalance: 0.034% (n=80) approaching Rodal's ~0.04%
+- Energy ratio at R₂: 1.085 converging to Rodal's ~1.07
+- Superluminal regime (v ≤ 3): E ∝ v² scaling confirmed
+- Optimization: σ=2.0, v=0.8 minimizes |E⁻| in tested parameter space
+
+**Getting Started:**
+```bash
+git clone https://github.com/DawsonInstitute/irrotational-warp-lab.git
+cd irrotational-warp-lab
+pip install -e ".[dev]"
+make test      # 39 tests
+make all       # Regenerate figures + compile paper
+```
+
+---
+
 ## 🏆 Validated Performance Metrics
 
 | **Capability** | **Achievement** | **Repository** | **Status** |
