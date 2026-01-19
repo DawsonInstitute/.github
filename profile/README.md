@@ -236,6 +236,38 @@ pip install -r requirements.txt && pytest
 
 ---
 
+### ♾️ SU(2) 3nj Series (su2-*)
+A coordinated suite implementing closed-form, generating-functional, and recurrence-based representations of SU(2) 3nj recoupling coefficients, with deterministic validation datasets and reproducible analysis pipelines.
+
+- 🔗 [su2-3nj-series-paper](https://github.com/DawsonInstitute/su2-3nj-series-paper)
+  Unified paper hub integrating the SU(2) 3nj representations, validation tables, and a reproducibility appendix. Contains the cross-repo integration harness and generated reference datasets.
+
+- 🔗 [su2-3nj-uniform-closed-form](https://github.com/DawsonInstitute/su2-3nj-uniform-closed-form)
+  Uniform closed-form hypergeometric representation for 12j (and related) symbols; includes implementations, tests, and documentation.
+
+- 🔗 [su2-3nj-generating-functional](https://github.com/DawsonInstitute/su2-3nj-generating-functional)
+  Universal generating-functional implementations and reference notebooks for deriving determinant-based formulas and extracting coefficients.
+
+- 🔗 [su2-3nj-recurrences](https://github.com/DawsonInstitute/su2-3nj-recurrences)
+  Finite three-term recurrence engine with stability analysis and reproducible stability reports.
+
+- 🔗 [su2-3nj-closedform](https://github.com/DawsonInstitute/su2-3nj-closedform)
+  Closed-form hypergeometric product formula repo with paper sources and reproducible numerical experiments.
+
+- 🔗 [su2-node-matrix-elements](https://github.com/DawsonInstitute/su2-node-matrix-elements)
+  Node-matrix element implementations (N0–N6 parity), deterministic validation scaffolding, and N6 derivative prototype with stability reports.
+
+**Getting started (quick):**
+```bash
+# Clone the unified hub and run integration tests
+git clone https://github.com/DawsonInstitute/su2-3nj-series-paper.git
+cd su2-3nj-series-paper
+pip install -r requirements.txt
+python scripts/run_integration_tests.py  # runs cross-repo validation harness and emits data/integration_validation_report.json
+```
+
+---
+
 ## 📚 Documentation & Resources
 
 - **Papers**: Manuscripts and preprints in `papers/` directories
