@@ -176,6 +176,45 @@ make all       # Regenerate figures + compile paper
 
 ---
 
+### 🔬 [energy-tensor-cone](https://github.com/DawsonInstitute/energy-tensor-cone)
+**Convex Cone of Energy Tensors under AQEI: Formal Verification and Computational Exploration**
+
+Hybrid formal/computational framework exploring the geometric structure of stress-energy tensors satisfying Averaged Quantum Energy Inequalities (AQEI). Combines Lean 4 theorem proving with Mathematica computational search to rigorously characterize the convex cone of admissible energy configurations in quantum field theory.
+
+**Features:**
+- **Formal proofs in Lean 4**: Closure, convexity, and homogenization theorems fully proven with Mathlib
+- **Computational search**: Mathematica randomized search in 1+1D Minkowski spacetime with Gaussian basis
+- **Vertex verification**: Exact rational arithmetic certification of extreme points using determinant computation
+- **End-to-end pipeline**: Mathematica → Python → Lean integration with automated candidate generation
+- **Comprehensive testing**: Full validation suite with build, Python, and Mathematica test harnesses
+
+**Key Results:**
+- ✅ **10/10 core theorems proven**: Admissible set closure, convexity, cone properties all mechanically verified
+- ✅ **Vertex certification**: Finite-dimensional extreme ray verified via exact rational determinant (6×6 full rank)
+- ✅ **Hybrid methodology**: Demonstrates feasibility of combining formal proofs with computational exploration
+- ✅ **Publication-ready**: Manuscript `aqei-cone-formalization.tex` with full mathematical exposition
+
+**Scientific Significance:**
+- Provides first mechanically-verified characterization of AQEI constraint geometry
+- Establishes existence of extreme rays in finite-dimensional discretization
+- Opens avenue for systematic exploration of quantum energy bounds using hybrid formal/computational methods
+- Addresses fundamental question: "What is the boundary of physically allowed energy configurations in QFT?"
+
+**Getting Started:**
+```bash
+git clone https://github.com/DawsonInstitute/energy-tensor-cone.git
+cd energy-tensor-cone
+./run_tests.sh  # Full validation: Lean build, Python tests, Mathematica search
+cd lean && lake build  # Verify formal proofs
+```
+
+**Paper & Publication:**
+- **Zenodo**: [DOI 10.5281/zenodo.18522457](https://doi.org/10.5281/zenodo.18522457)
+- **Manuscript**: `papers/aqei-cone-formalization.tex`
+- **Target**: Communications in Mathematical Physics (CMP)
+
+---
+
 ## 🏆 Validated Performance Metrics
 
 | **Capability** | **Achievement** | **Repository** | **Status** |
@@ -307,6 +346,12 @@ For research inquiries, collaborations, or technical questions:
 ---
 
 ## 🌟 Recent Highlights
+
+**February 2026:**
+- ✅ Released energy-tensor-cone with Lean 4 formal proofs and Mathematica computational search
+- ✅ Published to Zenodo: [Convex Cone of Energy Tensors under AQEI](https://doi.org/10.5281/zenodo.18522457)
+- ✅ Verified 10 core theorems mechanically (closure, convexity, homogenization, vertex characterization)
+- ✅ Demonstrated extreme ray existence via exact rational arithmetic certification
 
 **January 2026:**
 - ✅ Implemented emergent gravity mechanism and tests in `cosmological-constant-workbench` (parameter-free α=1 reproduces Λ-like ρ_DE).
