@@ -209,9 +209,10 @@ cd lean && lake build  # Verify formal proofs
 ```
 
 **Paper & Publication:**
-- **Zenodo**: [DOI 10.5281/zenodo.18522457](https://doi.org/10.5281/zenodo.18522457)
-- **Manuscript**: `papers/aqei-cone-formalization.tex`
-- **Target**: Communications in Mathematical Physics (CMP)
+- **Submitted**: Physical Review D (February 2026)
+- **Zenodo**: [DOI 10.5281/zenodo.18522456](https://doi.org/10.5281/zenodo.18522456)
+- **Dataset**: [DOI 10.5281/zenodo.18727839](https://doi.org/10.5281/zenodo.18727839)
+- **Manuscript**: `papers/aqei-cone-formalization-prd.tex`
 
 ---
 
@@ -349,9 +350,10 @@ For research inquiries, collaborations, or technical questions:
 
 **February 2026:**
 - ✅ Released energy-tensor-cone with Lean 4 formal proofs and Mathematica computational search
-- ✅ Published to Zenodo: [Convex Cone of Energy Tensors under AQEI](https://doi.org/10.5281/zenodo.18522457)
-- ✅ Verified 10 core theorems mechanically (closure, convexity, homogenization, vertex characterization)
+- ✅ Published to Zenodo: [Convex Cone of Energy Tensors under AQEI](https://doi.org/10.5281/zenodo.18522456)
+- ✅ Verified 35 theorems mechanically (closure, convexity, homogenization, vertex characterization, rational determinant)
 - ✅ Demonstrated extreme ray existence via exact rational arithmetic certification
+- ✅ Submitted to Physical Review D (February 21, 2026)
 
 **January 2026:**
 - ✅ Implemented emergent gravity mechanism and tests in `cosmological-constant-workbench` (parameter-free α=1 reproduces Λ-like ρ_DE).
