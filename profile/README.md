@@ -71,25 +71,25 @@ cd papers && pdflatex null_results.tex  # Null results manuscript
 ### 🧲 [hts-coils](https://github.com/DawsonInstitute/hts-coils)
 **REBCO HTS Coil Optimization Framework**
 
-Comprehensive computational framework for high-temperature superconducting coils using rare-earth barium copper oxide (REBCO). Validated designs for fusion energy and antimatter research applications.
+Comprehensive computational framework for high-temperature superconducting coils using rare-earth barium copper oxide (REBCO). Computational designs for fusion energy and antimatter research applications (model results; experimental validation pending).
 
 **Features:**
 - **Interactive Jupyter notebooks** (MyBinder ready) for education and research
 - **24 benchmark validations** with computational reproducibility
 - **Multi-backend FEA support**: COMSOL Multiphysics and FEniCSx (open-source)
-- **100% validation success rate** for paper reproduction
+- **Self-consistent winding-pack model** shared by the field, conductor, thermal and stress checks (headline numbers corrected 2026-11)
 
 **Achievements:**
-- ✅ **7.07T magnetic fields** with 0.16% ripple
-- ✅ **74.5K thermal margins** at 15K operating temperature
-- ✅ **Mechanical reinforcement** reducing stress from 178.7 MPa → 35 MPa
-- ✅ **30% current utilization** in multi-tape designs
+- ✅ **6.43T centre field** (6.82T peak) with 0.17% ripple over a stated region of interest (an earlier 7.07T figure was withdrawn)
+- ✅ **38K thermal margin** to the current-sharing temperature at 20K operation
+- ✅ **Radial stress 31.5 MPa** (< 35 MPa delamination limit), hoop 50.9 MPa
+- ✅ **30% current utilization** in multi-tape designs (95 tapes/turn)
 - ✅ **Plasma confinement**: β = 0.48 stable high-beta operation
 - ✅ **Interferometric detection**: 10⁻¹⁸ m spacetime distortion sensitivity
 
 **Getting Started:**
 ```bash
-git clone https://github.com/DawsonInstitute/hts-coils.git
+git clone --recurse-submodules https://github.com/DawsonInstitute/hts-coils.git
 cd hts-coils
 pip install -r requirements.txt
 python scripts/validate_reproducibility.py  # Run validation suite
@@ -220,9 +220,9 @@ cd lean && lake build  # Verify formal proofs
 
 | **Capability** | **Achievement** | **Repository** | **Status** |
 |---------------|----------------|----------------|-----------|
-| HTS Field Generation | 7.07T @ 0.16% ripple | hts-coils | ✅ Validated |
-| Thermal Management | 74.5K margin @ 15K operation | hts-coils | ✅ Validated |
-| Mechanical Integrity | 35 MPa reinforced design | hts-coils | ✅ Validated |
+| HTS Field Generation | 6.43T @ 0.17% ripple (winding-pack model) | hts-coils | ✅ Model-verified |
+| Thermal Management | 38K margin to T_cs @ 20K operation | hts-coils | ✅ Model-verified |
+| Mechanical Integrity | 31.5 MPa radial / 50.9 MPa hoop, no overband | hts-coils | ✅ Model-verified |
 | Energy Optimization | 40% reduction in positive density | warp-bubble-optimizer | ✅ Validated |
 | Interferometric Detection | 10⁻¹⁸ m displacement sensitivity | hts-coils | ✅ Validated |
 | Gravitational Coupling | G_eff suppression 10⁶-10¹⁰× | coherence-gravity-coupling | ✅ Validated |
@@ -263,7 +263,7 @@ conda env create -f environment.yml && conda activate cohgrav
 pytest -q && python generate_figures.py
 
 # hts-coils
-git clone https://github.com/DawsonInstitute/hts-coils.git
+git clone --recurse-submodules https://github.com/DawsonInstitute/hts-coils.git
 cd hts-coils
 pip install -r requirements.txt
 python scripts/validate_reproducibility.py
@@ -362,7 +362,7 @@ For research inquiries, collaborations, or technical questions:
 
 **October 2025:**
 - ✅ Released coherence-gravity-coupling v1.0.0 with validated experimental design
-- ✅ Validated 7.07T HTS coil designs with comprehensive FEA analysis
+- ✅ 6.4T HTS coil designs from a self-consistent winding-pack model with FEA cross-checks
 - ✅ Achieved 40% energy optimization in warp field calculations
 - ✅ Published convergence-validated gravitational coupling framework
 
